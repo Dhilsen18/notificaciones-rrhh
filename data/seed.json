@@ -1,0 +1,853 @@
+{
+  "usuarios": [
+    {
+      "id": "u1",
+      "username": "jperez",
+      "nombre": "Juan Pérez",
+      "area": "LOGISTICA",
+      "rol": "colaborador",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "u2",
+      "username": "mgarcia",
+      "nombre": "María García",
+      "area": "IMPORTACIONES",
+      "rol": "colaborador",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "u3",
+      "username": "clopez",
+      "nombre": "Carlos López",
+      "area": "FACTURACION",
+      "rol": "colaborador",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "u4",
+      "username": "arojas",
+      "nombre": "Ana Rojas",
+      "area": "MARKETING",
+      "rol": "colaborador",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "u5",
+      "username": "dsoto",
+      "nombre": "Diego Soto",
+      "area": "SISTEMAS",
+      "rol": "colaborador",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "rh1",
+      "username": "hradmin",
+      "nombre": "Laura Mendoza",
+      "area": "RECURSOS HUMANOS",
+      "rol": "recursos_humanos",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "ger1",
+      "username": "gerente",
+      "nombre": "Roberto Vega",
+      "area": "GERENCIA",
+      "rol": "gerencia",
+      "activo": true,
+      "password": "123456"
+    },
+    {
+      "id": "adm1",
+      "username": "administrador",
+      "nombre": "Patricia Núñez",
+      "area": "ADMINISTRACION",
+      "rol": "administracion",
+      "activo": true,
+      "password": "123456"
+    }
+  ],
+  "notificaciones": [
+    {
+      "id": "n001",
+      "fechaHora": "2026-06-03T09:15:00.000Z",
+      "numeroExpediente": "RH-001",
+      "numeroIncidencia": "INC-2026-001",
+      "colaboradorId": "u1",
+      "colaboradorNombre": "Juan Pérez",
+      "areaEmision": "LOGISTICA",
+      "tipoNotificacion": "Solicitud de Descargo",
+      "contenido": "Solicito descargo por retraso en despacho del pedido #4582 del 28/05. El vehículo de reparto presentó falla mecánica y quedó documentado en el parte de operaciones.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "EN PROCESO",
+      "origen": "colaborador",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t001",
+          "fechaHora": "2026-06-03T09:15:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: RECURSOS HUMANOS)",
+          "usuarioId": "u1",
+          "usuarioNombre": "Juan Pérez",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-001" }
+        }
+      ]
+    },
+    {
+      "id": "n002",
+      "fechaHora": "2026-06-03T10:30:00.000Z",
+      "numeroExpediente": "RH-002",
+      "numeroIncidencia": "INC-2026-002",
+      "colaboradorId": "u2",
+      "colaboradorNombre": "María García",
+      "areaEmision": "IMPORTACIONES",
+      "tipoNotificacion": "Incidencia",
+      "contenido": "Incidencia en documentación aduanera del embarque B/L-7784. Falta certificado de origen. Se requiere intervención de gerencia para autorizar gestión urgente con el proveedor.",
+      "archivos": [],
+      "areaRecepcion": "GERENCIA",
+      "estado": "EN PROCESO",
+      "origen": "colaborador",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t002",
+          "fechaHora": "2026-06-03T10:30:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: GERENCIA)",
+          "usuarioId": "u2",
+          "usuarioNombre": "María García",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-002" }
+        }
+      ]
+    },
+    {
+      "id": "n003",
+      "fechaHora": "2026-06-02T14:00:00.000Z",
+      "numeroExpediente": "RH-003",
+      "numeroIncidencia": "INC-2026-003",
+      "colaboradorId": "u3",
+      "colaboradorNombre": "Carlos López",
+      "areaEmision": "FACTURACION",
+      "tipoNotificacion": "Informe",
+      "contenido": "Informe sobre discrepancia en facturación del cliente CORP-992. Monto facturado difiere del pedido original en S/ 1,250.00. Se adjunta detalle para revisión.",
+      "archivos": [],
+      "areaRecepcion": "GERENCIA",
+      "estado": "DERIVADO",
+      "origen": "colaborador",
+      "derivadoA": "GERENCIA",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-06-02T16:45:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r001",
+          "codigo": "RES-001",
+          "comentarios": "Revisado el caso. La discrepancia requiere aprobación gerencial para emitir nota de crédito. Se deriva a Gerencia para autorización.",
+          "archivos": [],
+          "fechaHora": "2026-06-02T16:30:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t003",
+          "fechaHora": "2026-06-02T14:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: GERENCIA)",
+          "usuarioId": "u3",
+          "usuarioNombre": "Carlos López",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-003" }
+        },
+        {
+          "id": "t004",
+          "fechaHora": "2026-06-02T16:30:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-001 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-001", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t005",
+          "fechaHora": "2026-06-02T16:45:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a GERENCIA",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "GERENCIA" }
+        }
+      ]
+    },
+    {
+      "id": "n004",
+      "fechaHora": "2026-06-01T11:20:00.000Z",
+      "numeroExpediente": "RH-004",
+      "numeroIncidencia": "",
+      "colaboradorId": "u4",
+      "colaboradorNombre": "Ana Rojas",
+      "areaEmision": "MARKETING",
+      "tipoNotificacion": "Solicitud de Descargo",
+      "contenido": "Solicito descargo por no haber asistido a reunión de equipo el 30/05. Estaba en campo realizando activación comercial en cliente estratégico, con evidencia de check-in GPS.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "RESUELTO",
+      "origen": "colaborador",
+      "resoluciones": [
+        {
+          "id": "r002",
+          "codigo": "RES-002",
+          "comentarios": "Descargo aprobado. Se verificó la activación comercial en campo. Queda registrado en expediente personal sin sanción.",
+          "archivos": [],
+          "fechaHora": "2026-06-01T15:00:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t006",
+          "fechaHora": "2026-06-01T11:20:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: RECURSOS HUMANOS)",
+          "usuarioId": "u4",
+          "usuarioNombre": "Ana Rojas",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-004" }
+        },
+        {
+          "id": "t007",
+          "fechaHora": "2026-06-01T15:00:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-002 con estado RESUELTO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-002", "estado": "RESUELTO" }
+        }
+      ]
+    },
+    {
+      "id": "n005",
+      "fechaHora": "2026-06-02T08:00:00.000Z",
+      "numeroExpediente": "RH-005",
+      "numeroIncidencia": "INC-2026-005",
+      "colaboradorId": "u5",
+      "colaboradorNombre": "Diego Soto",
+      "areaEmision": "SISTEMAS",
+      "tipoNotificacion": "Incidencia",
+      "contenido": "Incidencia crítica: caída del servidor de reportes afectó cierre mensual. Se requiere revisión administrativa sobre tiempos de respuesta del proveedor de hosting.",
+      "archivos": [],
+      "areaRecepcion": "ADMINISTRACION",
+      "estado": "DERIVADO",
+      "origen": "colaborador",
+      "derivadoA": "ADMINISTRACION",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-06-02T12:00:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r003",
+          "codigo": "RES-003",
+          "comentarios": "Caso evaluado por RH. Corresponde revisión contractual con proveedor de hosting. Se deriva a Administración.",
+          "archivos": [],
+          "fechaHora": "2026-06-02T11:30:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t008",
+          "fechaHora": "2026-06-02T08:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: ADMINISTRACION)",
+          "usuarioId": "u5",
+          "usuarioNombre": "Diego Soto",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-005" }
+        },
+        {
+          "id": "t009",
+          "fechaHora": "2026-06-02T11:30:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-003 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-003", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t010",
+          "fechaHora": "2026-06-02T12:00:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a ADMINISTRACION",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "ADMINISTRACION" }
+        }
+      ]
+    },
+    {
+      "id": "n006",
+      "fechaHora": "2026-06-03T07:00:00.000Z",
+      "numeroExpediente": "RH-006",
+      "numeroIncidencia": "",
+      "colaboradorId": "u1",
+      "colaboradorNombre": "Juan Pérez",
+      "areaEmision": "LOGISTICA",
+      "areaDestino": "LOGISTICA",
+      "tipoNotificacion": "Emisión de Resolución",
+      "contenido": "Se informa que su solicitud de permiso del 15/05 fue aprobada. La resolución oficial queda registrada en su expediente. No requiere respuesta.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "NOTIFICADO",
+      "origen": "rh",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t011",
+          "fechaHora": "2026-06-03T07:00:00.000Z",
+          "accion": "NOTIFICACION_RH",
+          "descripcion": "Recursos Humanos envió notificación a Juan Pérez",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "expediente": "RH-006", "colaborador": "Juan Pérez" }
+        }
+      ]
+    },
+    {
+      "id": "n007",
+      "fechaHora": "2026-05-28T09:00:00.000Z",
+      "numeroExpediente": "RH-007",
+      "numeroIncidencia": "INC-2026-007",
+      "colaboradorId": "u2",
+      "colaboradorNombre": "María García",
+      "areaEmision": "IMPORTACIONES",
+      "tipoNotificacion": "Solicitud de Descargo",
+      "contenido": "Solicito descargo por error en digitación de peso en declaración aduanera DU-4455. Error detectado y corregido el mismo día.",
+      "archivos": [],
+      "areaRecepcion": "GERENCIA",
+      "estado": "RESUELTO",
+      "origen": "colaborador",
+      "derivadoA": "GERENCIA",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-05-28T14:00:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r004",
+          "codigo": "RES-004",
+          "comentarios": "Evaluado por RH. Error operativo sin dolo. Se deriva a Gerencia para validación final del descargo.",
+          "archivos": [],
+          "fechaHora": "2026-05-28T13:30:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        },
+        {
+          "id": "r005",
+          "codigo": "RES-005",
+          "comentarios": "Gerencia aprueba el descargo. Error de digitación debidamente corregido. Caso cerrado sin sanción.",
+          "archivos": [],
+          "fechaHora": "2026-05-29T10:00:00.000Z",
+          "autorId": "ger1",
+          "autorNombre": "Roberto Vega",
+          "autorRol": "gerencia",
+          "tipo": "derivada",
+          "areaDerivada": "GERENCIA"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t012",
+          "fechaHora": "2026-05-28T09:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: GERENCIA)",
+          "usuarioId": "u2",
+          "usuarioNombre": "María García",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-007" }
+        },
+        {
+          "id": "t013",
+          "fechaHora": "2026-05-28T13:30:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-004 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-004", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t014",
+          "fechaHora": "2026-05-28T14:00:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a GERENCIA",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "GERENCIA" }
+        },
+        {
+          "id": "t015",
+          "fechaHora": "2026-05-29T10:00:00.000Z",
+          "accion": "RESOLUCION_DERIVADA",
+          "descripcion": "GERENCIA registró respuesta RES-005 con estado RESUELTO",
+          "usuarioId": "ger1",
+          "usuarioNombre": "Roberto Vega",
+          "usuarioRol": "gerencia",
+          "metadata": { "codigo": "RES-005", "estado": "RESUELTO" }
+        }
+      ]
+    },
+    {
+      "id": "n008",
+      "fechaHora": "2026-06-03T08:00:00.000Z",
+      "numeroExpediente": "RH-008",
+      "numeroIncidencia": "INC-2026-008",
+      "colaboradorId": "u3",
+      "colaboradorNombre": "Carlos López",
+      "areaEmision": "FACTURACION",
+      "tipoNotificacion": "Solicitud de Descargo",
+      "contenido": "Solicito descargo por demora en cierre de factura mensual. El sistema ERP estuvo en mantenimiento programado el 31/05 de 18:00 a 23:00 hrs.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "PENDIENTE",
+      "origen": "colaborador",
+      "resoluciones": [
+        {
+          "id": "r006",
+          "codigo": "RES-006",
+          "comentarios": "Caso en revisión. Se requiere que el colaborador adjunte captura del ticket de mantenimiento del área de Sistemas para continuar la evaluación.",
+          "archivos": [],
+          "fechaHora": "2026-06-03T11:00:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t016",
+          "fechaHora": "2026-06-03T08:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: RECURSOS HUMANOS)",
+          "usuarioId": "u3",
+          "usuarioNombre": "Carlos López",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-008" }
+        },
+        {
+          "id": "t017",
+          "fechaHora": "2026-06-03T11:00:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-006 con estado PENDIENTE — a la espera de documentación adicional",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-006", "estado": "PENDIENTE" }
+        }
+      ]
+    },
+    {
+      "id": "n009",
+      "fechaHora": "2026-05-20T10:00:00.000Z",
+      "numeroExpediente": "RH-009",
+      "numeroIncidencia": "",
+      "colaboradorId": "u4",
+      "colaboradorNombre": "Ana Rojas",
+      "areaEmision": "MARKETING",
+      "tipoNotificacion": "Informe",
+      "contenido": "Informe de campaña Q1 2026. Resultados dentro de lo esperado. Se archiva por no requerir acción adicional de RRHH.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "ARCHIVADO",
+      "origen": "colaborador",
+      "resoluciones": [
+        {
+          "id": "r007",
+          "codigo": "RES-007",
+          "comentarios": "Informe recibido y revisado. No amerita acción de personal. Caso archivado en expediente.",
+          "archivos": [],
+          "fechaHora": "2026-05-21T09:00:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t018",
+          "fechaHora": "2026-05-20T10:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: RECURSOS HUMANOS)",
+          "usuarioId": "u4",
+          "usuarioNombre": "Ana Rojas",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-009" }
+        },
+        {
+          "id": "t019",
+          "fechaHora": "2026-05-21T09:00:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-007 con estado ARCHIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-007", "estado": "ARCHIVADO" }
+        }
+      ]
+    },
+    {
+      "id": "n010",
+      "fechaHora": "2026-05-25T13:00:00.000Z",
+      "numeroExpediente": "RH-010",
+      "numeroIncidencia": "INC-2026-010",
+      "colaboradorId": "u5",
+      "colaboradorNombre": "Diego Soto",
+      "areaEmision": "SISTEMAS",
+      "tipoNotificacion": "Incidencia",
+      "contenido": "Solicitud de ampliación de accesos administrativos al servidor de producción sin autorización previa documentada.",
+      "archivos": [],
+      "areaRecepcion": "ADMINISTRACION",
+      "estado": "RECHAZADA",
+      "origen": "colaborador",
+      "derivadoA": "ADMINISTRACION",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-05-25T17:00:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r008",
+          "codigo": "RES-008",
+          "comentarios": "Solicitud evaluada. Requiere validación de Administración por implicancias de seguridad.",
+          "archivos": [],
+          "fechaHora": "2026-05-25T16:00:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        },
+        {
+          "id": "r009",
+          "codigo": "RES-009",
+          "comentarios": "Administración rechaza la solicitud. Los accesos administrativos deben gestionarse exclusivamente mediante ticket formal con aprobación del jefe directo y registro en matriz de permisos.",
+          "archivos": [],
+          "fechaHora": "2026-05-26T11:00:00.000Z",
+          "autorId": "adm1",
+          "autorNombre": "Patricia Núñez",
+          "autorRol": "administracion",
+          "tipo": "derivada",
+          "areaDerivada": "ADMINISTRACION"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t020",
+          "fechaHora": "2026-05-25T13:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: ADMINISTRACION)",
+          "usuarioId": "u5",
+          "usuarioNombre": "Diego Soto",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-010" }
+        },
+        {
+          "id": "t021",
+          "fechaHora": "2026-05-25T16:00:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-008 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-008", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t022",
+          "fechaHora": "2026-05-25T17:00:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a ADMINISTRACION por política de accesos",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "ADMINISTRACION" }
+        },
+        {
+          "id": "t023",
+          "fechaHora": "2026-05-26T11:00:00.000Z",
+          "accion": "RESOLUCION_DERIVADA",
+          "descripcion": "ADMINISTRACION registró respuesta RES-009 con estado RECHAZADA",
+          "usuarioId": "adm1",
+          "usuarioNombre": "Patricia Núñez",
+          "usuarioRol": "administracion",
+          "metadata": { "codigo": "RES-009", "estado": "RECHAZADA" }
+        }
+      ]
+    },
+    {
+      "id": "n011",
+      "fechaHora": "2026-06-02T15:00:00.000Z",
+      "numeroExpediente": "RH-011",
+      "numeroIncidencia": "",
+      "colaboradorId": "u2",
+      "colaboradorNombre": "María García",
+      "areaEmision": "IMPORTACIONES",
+      "areaDestino": "IMPORTACIONES",
+      "tipoNotificacion": "Solicitud de Descargo",
+      "contenido": "Se le recuerda presentar su constancia de capacitación en comercio exterior vencida el 30/04. Plazo final: 15/06/2026.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "NOTIFICADO",
+      "origen": "rh",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t024",
+          "fechaHora": "2026-06-02T15:00:00.000Z",
+          "accion": "NOTIFICACION_RH",
+          "descripcion": "Recursos Humanos envió notificación informativa a María García sobre documentación pendiente",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "expediente": "RH-011", "colaborador": "María García" }
+        }
+      ]
+    },
+    {
+      "id": "n012",
+      "fechaHora": "2026-06-03T11:45:00.000Z",
+      "numeroExpediente": "RH-012",
+      "numeroIncidencia": "INC-2026-012",
+      "colaboradorId": "u1",
+      "colaboradorNombre": "Juan Pérez",
+      "areaEmision": "LOGISTICA",
+      "tipoNotificacion": "Incidencia",
+      "contenido": "Pérdida parcial de mercadería en tránsito — faltante de 3 cajas en guía GR-8891. Se requiere investigación y descargo por diferencia de inventario.",
+      "archivos": [],
+      "areaRecepcion": "ADMINISTRACION",
+      "estado": "EN PROCESO",
+      "origen": "colaborador",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t025",
+          "fechaHora": "2026-06-03T11:45:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: ADMINISTRACION)",
+          "usuarioId": "u1",
+          "usuarioNombre": "Juan Pérez",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-012" }
+        }
+      ]
+    },
+    {
+      "id": "n013",
+      "fechaHora": "2026-05-30T09:30:00.000Z",
+      "numeroExpediente": "RH-013",
+      "numeroIncidencia": "INC-2026-013",
+      "colaboradorId": "u4",
+      "colaboradorNombre": "Ana Rojas",
+      "areaEmision": "MARKETING",
+      "tipoNotificacion": "OTROS",
+      "contenido": "Solicitud de revisión de política de viáticos para activaciones en provincia. Propuesta de ajuste de tarifa diaria de S/ 80 a S/ 95.",
+      "archivos": [],
+      "areaRecepcion": "GERENCIA",
+      "estado": "DERIVADO",
+      "origen": "colaborador",
+      "derivadoA": "GERENCIA",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-05-30T14:30:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r010",
+          "codigo": "RES-010",
+          "comentarios": "Propuesta revisada por RH. Impacto presupuestal requiere aprobación gerencial. Se remite a Gerencia para evaluación.",
+          "archivos": [],
+          "fechaHora": "2026-05-30T14:00:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t026",
+          "fechaHora": "2026-05-30T09:30:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: GERENCIA)",
+          "usuarioId": "u4",
+          "usuarioNombre": "Ana Rojas",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-013" }
+        },
+        {
+          "id": "t027",
+          "fechaHora": "2026-05-30T14:00:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-010 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-010", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t028",
+          "fechaHora": "2026-05-30T14:30:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a GERENCIA para aprobación de ajuste presupuestal",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "GERENCIA" }
+        }
+      ]
+    },
+    {
+      "id": "n014",
+      "fechaHora": "2026-05-27T16:00:00.000Z",
+      "numeroExpediente": "RH-014",
+      "numeroIncidencia": "INC-2026-014",
+      "colaboradorId": "u5",
+      "colaboradorNombre": "Diego Soto",
+      "areaEmision": "SISTEMAS",
+      "tipoNotificacion": "Informe",
+      "contenido": "Informe de restauración del servicio de reportes. Tiempo de indisponibilidad: 4h 22min. Causa raíz: certificado SSL expirado.",
+      "archivos": [],
+      "areaRecepcion": "ADMINISTRACION",
+      "estado": "RESUELTO",
+      "origen": "colaborador",
+      "derivadoA": "ADMINISTRACION",
+      "derivadoPorId": "rh1",
+      "derivadoPorNombre": "Laura Mendoza",
+      "fechaDerivacion": "2026-05-27T19:00:00.000Z",
+      "resoluciones": [
+        {
+          "id": "r011",
+          "codigo": "RES-011",
+          "comentarios": "Informe técnico recibido. Se deriva a Administración para gestión con proveedor de certificados.",
+          "archivos": [],
+          "fechaHora": "2026-05-27T18:30:00.000Z",
+          "autorId": "rh1",
+          "autorNombre": "Laura Mendoza",
+          "autorRol": "recursos_humanos",
+          "tipo": "rh"
+        },
+        {
+          "id": "r012",
+          "codigo": "RES-012",
+          "comentarios": "Administración confirma renovación automática de certificados contratada. Proveedor notificado. Caso resuelto.",
+          "archivos": [],
+          "fechaHora": "2026-05-28T10:30:00.000Z",
+          "autorId": "adm1",
+          "autorNombre": "Patricia Núñez",
+          "autorRol": "administracion",
+          "tipo": "derivada",
+          "areaDerivada": "ADMINISTRACION"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "t029",
+          "fechaHora": "2026-05-27T16:00:00.000Z",
+          "accion": "REGISTRO",
+          "descripcion": "Notificación registrada y enviada a Recursos Humanos (área recepción solicitada: ADMINISTRACION)",
+          "usuarioId": "u5",
+          "usuarioNombre": "Diego Soto",
+          "usuarioRol": "colaborador",
+          "metadata": { "expediente": "RH-014" }
+        },
+        {
+          "id": "t030",
+          "fechaHora": "2026-05-27T18:30:00.000Z",
+          "accion": "RESOLUCION_RH",
+          "descripcion": "Recursos Humanos registró resolución RES-011 con estado DERIVADO",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "codigo": "RES-011", "estado": "DERIVADO" }
+        },
+        {
+          "id": "t031",
+          "fechaHora": "2026-05-27T19:00:00.000Z",
+          "accion": "DERIVACION",
+          "descripcion": "Notificación derivada a ADMINISTRACION",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "area": "ADMINISTRACION" }
+        },
+        {
+          "id": "t032",
+          "fechaHora": "2026-05-28T10:30:00.000Z",
+          "accion": "RESOLUCION_DERIVADA",
+          "descripcion": "ADMINISTRACION registró respuesta RES-012 con estado RESUELTO",
+          "usuarioId": "adm1",
+          "usuarioNombre": "Patricia Núñez",
+          "usuarioRol": "administracion",
+          "metadata": { "codigo": "RES-012", "estado": "RESUELTO" }
+        }
+      ]
+    },
+    {
+      "id": "n015",
+      "fechaHora": "2026-06-01T08:00:00.000Z",
+      "numeroExpediente": "RH-015",
+      "numeroIncidencia": "",
+      "colaboradorId": "u4",
+      "colaboradorNombre": "Ana Rojas",
+      "areaEmision": "MARKETING",
+      "areaDestino": "MARKETING",
+      "tipoNotificacion": "Emisión de Resolución",
+      "contenido": "Su evaluación de desempeño Q1 2026 ha sido registrada con calificación Satisfactorio. Felicitaciones por los resultados alcanzados en campaña de verano.",
+      "archivos": [],
+      "areaRecepcion": "RECURSOS HUMANOS",
+      "estado": "NOTIFICADO",
+      "origen": "rh",
+      "resoluciones": [],
+      "timeline": [
+        {
+          "id": "t033",
+          "fechaHora": "2026-06-01T08:00:00.000Z",
+          "accion": "NOTIFICACION_RH",
+          "descripcion": "Recursos Humanos envió notificación de evaluación de desempeño a Ana Rojas",
+          "usuarioId": "rh1",
+          "usuarioNombre": "Laura Mendoza",
+          "usuarioRol": "recursos_humanos",
+          "metadata": { "expediente": "RH-015", "colaborador": "Ana Rojas" }
+        }
+      ]
+    }
+  ],
+  "contadores": {
+    "expediente": 15,
+    "resolucion": 12
+  }
+}
